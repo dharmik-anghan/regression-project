@@ -8,7 +8,7 @@ def get_requirements(file_path: str) -> List[str]:
     requirements = []
 
     with open(file_path) as file_obj:
-        requirements = file_obj.readline()
+        requirements = file_obj.readlines()
         requirements = [req.replace("\n", "") for req in requirements]
 
         if HYPEN_E_DOT in requirements:
@@ -21,6 +21,6 @@ setup(
     version="0.0.1",
     author="Dharmik",
     author_email="dharmikanghan09@gmail.com",
-    include_dirs=get_requirements("requirements.txt"),
+    install_requires=get_requirements("requirements.txt"),
     packages=find_packages(),
 )
