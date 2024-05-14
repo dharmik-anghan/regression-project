@@ -1,4 +1,7 @@
-numpy
-pandas
-Flask
+numpy==1.26.4
+pandas==2.2.2
+flask==3.0.3
+seaborn==0.13.2
+matplotlib==3.8.4
+scikit-learn==1.4.2
 -e .
